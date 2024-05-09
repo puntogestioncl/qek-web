@@ -38,6 +38,9 @@ class EventResource extends Resource
                     ->required(),
                 Forms\Components\FileUpload::make('image_url')
                     ->label(__('Afiche'))
+                    ->image()
+                    ->previewable()
+                    ->imageEditor()
                     ->required()
             ]);
     }
@@ -46,7 +49,10 @@ class EventResource extends Resource
     {
         return $table
             ->columns([
-                //
+                Tables\Columns\TextColumn::make('title'),
+                Tables\Columns\TextColumn::make('date'),
+                Tables\Columns\TextColumn::make('place'),
+                Tables\Columns\ImageColumn::make('image_url')
             ])
             ->filters([
                 //
