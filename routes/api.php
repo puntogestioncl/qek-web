@@ -8,7 +8,7 @@ Route::post('/login', [ AuthController::class, 'login' ])->name('login');
 
 Route::group([ 'namespace' => 'App\Http\Controllers', 'middleware' => 'auth:sanctum' ], function () {
 
-    Route::get('/event', [ EventController::class, 'index' ])->name('event');
+    Route::apiResource('event',EventController::class);
 
 });
 

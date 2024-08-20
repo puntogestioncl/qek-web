@@ -40,7 +40,9 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return new EventCollection(
+            Event::findOrFail($id)
+        );
     }
 
     /**
