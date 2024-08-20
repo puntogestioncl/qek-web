@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', \App\Livewire\Home::class)->name('home');
 Route::get('/eventos', \App\Livewire\ListEvents::class)->name('list-events');
 
+Route::get('/evento/{event}', \App\Livewire\Event::class)->name('event');
+
 Route::get('/x', function (){
     return view('index');
 });
