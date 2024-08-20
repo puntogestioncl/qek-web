@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Filament\Resources\EventResource;
+use App\Http\Resources\EventResource;
 use App\Http\Resources\EventCollection;
 use App\Models\Event;
 use Illuminate\Http\Request;
@@ -40,9 +40,7 @@ class EventController extends Controller
      */
     public function show(string $id)
     {
-        return new EventCollection(
-            Event::findOrFail($id)
-        );
+        return new EventResource($id);
     }
 
     /**
