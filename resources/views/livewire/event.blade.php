@@ -21,14 +21,12 @@
                         <p class="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
                             {!! $event->body !!}
                         </p>
-                        <p class="block">{{ $event->place }}
-                            <a class="text-white" href="http://maps.google.com/?q={{ $event->place }}" target="_blank">
+                        <p class="flex-1">{{ $event->place }} <a class="text-white" href="http://maps.google.com/?q={{ $event->place }}" target="_blank">
                                 <svg class="text-red-basic w-5 h-5" data-slot="icon" fill="none" stroke-width="1.5" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"></path>
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"></path>
                                 </svg>
-                            </a>
-                        </p>
+                            </a></p>
                     </div>
                 </div>
             </div>

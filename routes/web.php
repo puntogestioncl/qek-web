@@ -18,6 +18,8 @@ Route::get('/eventos', \App\Livewire\ListEvents::class)->name('list-events');
 
 Route::get('/evento/{event}', \App\Livewire\Event::class)->name('event');
 
+Route::get('/politicas-de-privacidad', \App\Livewire\PrivacyPolicy::class)->name('privacy-policy');
+
 Route::get('/x', function (){
     return view('index');
 });
